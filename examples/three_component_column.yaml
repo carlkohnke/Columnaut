@@ -1,0 +1,39 @@
+name: three_component_8_tray_column
+component_database: ../component_database.yaml
+components:
+  - propane
+  - i-butane
+  - n-pentane
+
+column:
+  equilibrium_trays: 8
+  condenser_type: total
+  reboiler_type: partial
+  pressure_profile:
+    top_kpa: 180.0
+    bottom_kpa: 205.0
+
+feeds:
+  - name: mixed_feed
+    stage: 5
+    temperature_k: 300.0
+    pressure_kpa: 191.1
+    total_flow_kmol_h: 20.0
+    composition:
+      propane: 0.30
+      i-butane: 0.40
+      n-pentane: 0.30
+    vapor_fraction: 0.35
+
+reflux_ratios: [2.0]
+operating_specification:
+  kind: distillate_flow
+  value_kmol_h: 10.0
+  light_components: [propane, i-butane]
+initial_guess:
+  kind: perfect_split
+  light_components: [propane, i-butane]
+solver:
+  max_iterations: 100
+  temperature_tau_tolerance_k2: 1.0e-2
+  bubble_point_tolerance: 1.0e-8

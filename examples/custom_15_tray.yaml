@@ -1,0 +1,45 @@
+name: custom_15_tray_column
+
+component_database: ../component_database.yaml
+components:
+  - propane
+  - i-butane
+  - n-pentane
+
+column:
+  equilibrium_trays: 15
+  condenser_type: total
+  reboiler_type: partial
+  pressure_profile:
+    top_kpa: 180.0
+    bottom_kpa: 205.0
+
+feeds:
+  - name: main_feed
+    # Physical tray 3 is modeled stage 4 because stage 1 is the condenser.
+    stage: 4
+    temperature_k: 300.0
+    pressure_kpa: 500.0
+    total_flow_kmol_h: 20.0
+    composition:
+      propane: 0.30
+      i-butane: 0.40
+      n-pentane: 0.30
+    vapor_fraction: 0.0
+
+reflux_ratios: [3.0]
+
+operating_specification:
+  kind: distillate_flow
+  value_kmol_h: 12.0
+
+initial_guess:
+  kind: perfect_split
+  light_components:
+    - propane
+    - i-butane
+
+solver:
+  max_iterations: 100
+  temperature_tau_tolerance_k2: 1.0e-2
+  bubble_point_tolerance: 1.0e-8

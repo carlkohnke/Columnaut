@@ -1,0 +1,79 @@
+# Shared thermodynamic property catalog.
+
+# To add a chemical, copy one complete entry and give it a unique `name`.
+# Required units: critical temperature [K], critical pressure [MPa here],
+# ideal-gas heat-capacity correlation coefficients, and reference enthalpy [J/mol].
+# A column configuration selects entries from this file by their exact names.
+
+components:
+  - name: propane
+    identifier: 1
+    critical_temperature_k: 369.83
+    critical_pressure_mpa: 4.248
+    acentric_factor: 0.1523
+    ideal_gas_cp_coefficients: [51.92, 192.45, 1.6265, 116.8, 0.7236]
+    reference_enthalpy_j_mol: -104700
+
+  - name: n-butane
+    identifier: 2
+    critical_temperature_k: 425.12
+    critical_pressure_mpa: 3.796
+    acentric_factor: 0.2002
+    ideal_gas_cp_coefficients: [71.34, 243.0, 1.630, 150.33, 0.73042]
+    reference_enthalpy_j_mol: -125600
+
+  - name: i-butane
+    identifier: 3
+    critical_temperature_k: 407.8
+    critical_pressure_mpa: 3.64
+    acentric_factor: 0.1835
+    ideal_gas_cp_coefficients: [65.49, 247.76, 1.587, 157.5, 0.70699]
+    reference_enthalpy_j_mol: -134200
+
+  - name: n-pentane
+    identifier: 4
+    critical_temperature_k: 469.7
+    critical_pressure_mpa: 3.37
+    acentric_factor: 0.2515
+    ideal_gas_cp_coefficients: [88.05, 301.1, 1.6502, 189.2, 0.7476]
+    reference_enthalpy_j_mol: -146800
+
+  - name: i-pentane
+    identifier: 5
+    critical_temperature_k: 460.4
+    critical_pressure_mpa: 3.38
+    acentric_factor: 0.2279
+    ideal_gas_cp_coefficients: [74.6, 326.5, 1.545, 192.3, 0.667]
+    reference_enthalpy_j_mol: -153700
+
+  - name: n-hexane
+    identifier: 6
+    critical_temperature_k: 507.6
+    critical_pressure_mpa: 3.025
+    acentric_factor: 0.3013
+    ideal_gas_cp_coefficients: [104.4, 352.3, 1.6946, 236.9, 0.7616]
+    reference_enthalpy_j_mol: -167100
+
+  - name: water
+    identifier: water
+    critical_temperature_k: 647.096
+    critical_pressure_mpa: 22.064
+    acentric_factor: 0.3449
+    ideal_gas_cp_coefficients: [33.363, 26.79, 2.6105, 8.896, 1.169]
+    reference_enthalpy_j_mol: -285830
+
+  - name: ethanol
+    identifier: ethanol
+    critical_temperature_k: 514.0
+    critical_pressure_mpa: 6.137
+    acentric_factor: 0.6436
+    ideal_gas_cp_coefficients: [49.2, 145.77, 1.6628, 93.9, 0.7476]
+    reference_enthalpy_j_mol: -277000
+
+  - name: formic_acid
+    identifier: formic_acid
+    critical_temperature_k: 588.0
+    critical_pressure_mpa: 5.81
+    acentric_factor: 0.3173
+    ideal_gas_cp_coefficients: [33.81, 75.93, 1.1925, 31.8, 0.55]
+    reference_enthalpy_j_mol: -363600
